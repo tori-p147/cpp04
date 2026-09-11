@@ -8,8 +8,10 @@ class Cat: public Animal
 {
 	public:
 		Cat();
+		Cat(const Cat &copy);
 		~Cat();
 		void makeSound() const;
+		Brain* getBrain() const;
 
 	private:
 		Brain* attribute;

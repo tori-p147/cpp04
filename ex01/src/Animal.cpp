@@ -6,11 +6,6 @@ Animal::Animal()
 	std::cout << "Animal constructor" << std::endl;
 }
 
-Animal::~Animal()
-{
-	std::cout << "Animal destructor" << std::endl;
-}
-
 void Animal::makeSound() const
 {
 	std::cout << "Animal sound~" << std::endl;

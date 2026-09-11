@@ -8,8 +8,12 @@ class Brain
 {
 	public:
 		Brain();
+		Brain(const Brain &copy);
+		Brain & operator=(const Brain &copy);
 		~Brain();
-		std::string ideas[100];
+
+	private:
+		std::string *ideas;
 };
 
 #endif
