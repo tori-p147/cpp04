@@ -1,4 +1,4 @@
-#include <Animal.hpp>
+#include <AAnimal.hpp>
 #include <Cat.hpp>
 #include <Dog.hpp>
 #include <array>
@@ -6,7 +6,7 @@
 int	main(void)
 {
 	int size = 10;
-	const Animal *animal[size];
+	const AAnimal *animal[size];
 	
 	int n = 0;
 	
@@ -15,11 +15,13 @@ int	main(void)
 		if (n < size / 2)
 		{
 			animal[n] = new Dog();
+			animal[n]->makeSound();
 			n++;
 		}
 		if (n >= size / 2)
 		{
 			animal[n] = new Cat();
+			animal[n]->makeSound();
 			n++;
 		}
 	}

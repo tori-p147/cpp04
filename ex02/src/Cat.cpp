@@ -23,7 +23,7 @@ Cat & Cat::operator=(const Cat &src)
 		return *this;
 	delete attribute;
 	if (src.attribute)
-		attribute = new Brain(*src.getBrain());
+		attribute = new Brain(*src.attribute);
 	type = src.type;
 	return *this;
 }

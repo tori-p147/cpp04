@@ -42,6 +42,5 @@ void Dog::makeSound() const
 
 Brain* Dog::getBrain() const
 {
-	std::cout << "brain return" << std::endl;
 	return attribute;
 }

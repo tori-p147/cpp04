@@ -4,13 +4,13 @@
 # include <iostream>
 # include <string>
 
-class Animal
+class AAnimal
 {
 	public:
-		Animal();
-		~Animal();
+		AAnimal();
+		virtual ~AAnimal();
 		
-		virtual void makeSound() const;
+		virtual void makeSound() const = 0;
 		std::string getType() const;
 
 	protected:
