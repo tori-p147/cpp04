@@ -2,18 +2,15 @@
 
 Ice::Ice()
 {
-	std::cout << "Ice constructor" << std::endl;
 	_type = "ice";
 }
 
 Ice::~Ice()
 {
-	std::cout << "Ice destructor" << std::endl;
 }
 
 Ice::Ice(const Ice &src)
 {
-	std::cout << "Ice copy constructor" << std::endl;
 	_type = src._type;
 }
 

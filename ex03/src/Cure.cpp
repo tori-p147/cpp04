@@ -2,18 +2,15 @@
 
 Cure::Cure()
 {
-	std::cout << "Cure constructor" << std::endl;
 	_type = "cure";
 }
 
 Cure::~Cure()
 {
-	std::cout << "Cure destructor" << std::endl;
 }
 
 Cure::Cure(const Cure &src)
 {
-	std::cout << "Cure copy constructor" << std::endl;
 	_type = src._type;
 }
 

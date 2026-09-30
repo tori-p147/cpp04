@@ -11,14 +11,10 @@ int main()
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
 	ICharacter* me = new Character("me");
-	printf("character created\n");
 	AMateria* tmp;
-	printf("tmp created\n");
 	tmp = src->createMateria("ice");
-	printf("ice created\n");
 	me->equip(tmp);
 		tmp = src->createMateria("cure");
-	printf("cure end\n");
 	me->equip(tmp);
 	ICharacter* bob = new Character("bob");
 	me->use(0, *bob);

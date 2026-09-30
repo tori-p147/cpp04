@@ -4,17 +4,17 @@
 
 MateriaSource::MateriaSource()
 {
-	std::cout << "Materia constructor" << std::endl;
-	_stored[4] = nullptr;
+	int i = 0;
+	while (i < 4)
+		_stored[i++] = nullptr;
 }
 
 MateriaSource::~MateriaSource()
 {
-	std::cout << "Materia destructor" << std::endl;
 	int i = 0;
 	while (i < 4)
 	{
-		delete _stored[i];
+		delete _stored[i++];
 	}
 }
 
@@ -25,11 +25,12 @@ AMateria* MateriaSource::getStored() const
 
 void MateriaSource::learnMateria(AMateria* materia)
 {
+	if (materia == nullptr)
+		return;
 	int i = 0;
 	while (i < 4)
 	{
-		printf("learn materia\n");
-		if (_stored[i] && _stored[i] == nullptr)
+		if (_stored[i] == nullptr)
 		{
 			_stored[i] = materia;
 			break;
@@ -45,7 +46,6 @@ AMateria* MateriaSource::createMateria(std::string const & type)
 	int i = 0;
 	while (i < 4)
 	{
-		printf("type null");
 		if (_stored[i] && _stored[i]->getType() == type)
 			isKnownMateria = true;
 		i++;

@@ -4,31 +4,31 @@
 
 Character::Character()
 {
-	std::cout << "Character constructor" << std::endl;
 	_name = "";
-	// int i = 0;
-	// while (i < 4)
-	// {
-	// 	_inventory[i] = nullptr;
-	// 	i++;
-	// }
+	int i = 0;
+	while (i < 4)
+	{
+		_inventory[i++] = nullptr;
+	}
 }
 
 Character::~Character()
 {
-	std::cout << "Character destructor" << std::endl;
 	int i = 0;
 	while (i < 4)
 	{
-		delete _inventory[i];
-		i++;
+		delete _inventory[i++];
 	}
 }
 
 Character::Character(std::string name)
 {
-	std::cout << "Character name constructor" << std::endl;
 	_name = name;
+	int i = 0;
+	while (i < 4)
+	{
+		_inventory[i++] = nullptr;
+	}
 }
 
 Character::Character(const Character &src)
@@ -69,11 +69,12 @@ std::string const & Character::getName() const
 
 void Character::equip(AMateria* m)
 {
+	if (m == nullptr)
+		return;
 	int i = 0;
 	while (i < 4)
 	{
-		printf("equip\n");
-		if(_inventory[i] == nullptr)
+		if(_inventory[i] == 0)
 		{
 			_inventory[i] = m;
 			break;
